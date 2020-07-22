@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.scss";
+import { Stitch } from "mongodb-stitch-browser-sdk";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import MainPage from "./containers/MainPage";
+import WrapperComponent from "./components/WrapperComponent";
+import AboutComponent from "./components/About";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    Stitch.initializeDefaultAppClient("myshop-wudnn");
+
+    return (
+        <Router>
+            <Switch>
+                <Route exact path="/">
+                    <WrapperComponent><MainPage/></WrapperComponent>
+                </Route>
+                <Route path='/about'>
+                    <WrapperComponent><AboutComponent/></WrapperComponent>
+                </Route>
+            </Switch>
+        </Router>
+    );
 }
 
 export default App;

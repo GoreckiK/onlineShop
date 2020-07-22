@@ -1,0 +1,11 @@
+.main-page {
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    .items-container {
+        padding: 0 15px;
+        display: flex;
+        flex-flow: row wrap;
+    }
+}
