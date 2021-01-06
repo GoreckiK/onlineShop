@@ -18,7 +18,7 @@
     "@types/styletron-react": "^5.0.2",
     "@types/styletron-standard": "^2.0.0",
     "antd": "^4.4.2",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "baseui": "^9.86.0",
     "mongodb": "^3.5.9",
     "mongodb-stitch-browser-sdk": "^4.8.0",
